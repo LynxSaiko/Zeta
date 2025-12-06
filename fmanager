@@ -10,8 +10,8 @@ if [ -z "$PYTHON_CMD" ]; then
 fi
 
 # Run from installed location or current dir
-if [ -f "/opt/fmanager/main.py" ]; then
-    cd "/opt/fmanager" && $PYTHON_CMD main.py "$@"
+if [ -f "/usr/share/zeta/main.py" ]; then
+    cd "/usr/share/zeta" && $PYTHON_CMD main.py "$@"
 elif [ -f "$(dirname "$0")/main.py" ]; then
     cd "$(dirname "$0")" && $PYTHON_CMD main.py "$@"
 else
