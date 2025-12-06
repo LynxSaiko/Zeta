@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
-Name=Fmanager
+Name=Zeta Manager
 GenericName=File Manager
 Comment=Modern terminal-based file manager
-Exec=fmanager
-Icon=/opt/fmanager/icon.png
+Exec=zeta
+Icon=/usr/share/zeta/icon.png
 Terminal=true
 Type=Application
 Categories=Utility;FileManager;
