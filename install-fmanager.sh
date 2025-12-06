@@ -2,8 +2,8 @@
 # Fmanager Installation Script
 
 # Configuration
-APP_NAME="fmanager"
-INSTALL_DIR="/opt/$APP_NAME"
+APP_NAME="zeta"
+INSTALL_DIR="/usr/share/$APP_NAME"
 BIN_DIR="/usr/local/bin"
 
 # Check root
@@ -13,7 +13,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Create directories
-echo "Installing Fmanager to $INSTALL_DIR..."
+echo "Installing Zeta Manager to $INSTALL_DIR..."
 mkdir -p "$INSTALL_DIR"
 chmod 755 "$INSTALL_DIR"
 
@@ -24,16 +24,16 @@ chmod 644 "$INSTALL_DIR"/*.settings
 
 # Install wrapper
 echo "Creating executable..."
-cp fmanager "$BIN_DIR/"
-chmod 755 "$BIN_DIR/fmanager"
+cp zeta "$BIN_DIR/"
+chmod 755 "$BIN_DIR/zeta"
 
 # Create desktop entry
 echo "Adding desktop integration..."
-cat > /usr/share/applications/fmanager.desktop <<EOL
+cat > /usr/share/applications/zeta.desktop <<EOL
 [Desktop Entry]
-Name=Fmanager
+Name=Zeta Manager
 Comment=Terminal File Manager
-Exec=fmanager
+Exec=zeta
 Icon=$INSTALL_DIR/icon.png
 Terminal=true
 Type=Application
