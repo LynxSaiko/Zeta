@@ -22,6 +22,11 @@ cp -r ./* "$INSTALL_DIR/"
 chmod 644 "$INSTALL_DIR"/*.py
 chmod 644 "$INSTALL_DIR"/*.settings
 
+# Install default config for root
+mkdir -p /root/.config/zeta
+cp "$INSTALL_DIR/config.json" /root/.config/zeta/
+chmod 644 /root/.config/zeta/config.json
+
 # Install wrapper
 echo "Creating executable..."
 cp zeta "$BIN_DIR/"
@@ -41,4 +46,4 @@ Categories=System;FileTools;
 Keywords=file;manager;terminal;
 EOL
 
-echo "Installation complete. Run with 'fmanager'"
+echo "Installation complete. Run with 'zeta'"
