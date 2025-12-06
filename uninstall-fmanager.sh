@@ -1,5 +1,5 @@
 #!/bin/bash
-# Fmanager Uninstaller
+# Zeta Manager Uninstaller
 
 if [ "$(id -u)" -ne 0 ]; then
     echo "Please run as root"
@@ -7,8 +7,8 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 echo "Removing Fmanager..."
-rm -rf /opt/fmanager
-rm -f /usr/local/bin/fmanager
-rm -f /usr/share/applications/fmanager.desktop
+rm -rf /usr/share/zeta
+rm -f /usr/local/bin/zeta
+rm -f /usr/share/applications/zeta.desktop
 
-echo "Fmanager has been completely removed"
+echo "Zeta Manager has been completely removed"
